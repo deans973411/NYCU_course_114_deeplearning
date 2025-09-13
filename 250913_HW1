@@ -1,0 +1,52 @@
+
+
+First question: How to work in windows
+
+
+
+
+
+
+problem(simple base line score:3.22137):
+the figure didnlt work!
+
+Here, the 'Ir' was the learning rate of 0.000, meaning that will not learning anymore.
+I will try on 0.001, and it work, epoch860, val loss0.7296 ----score: 3.22141
+
+if 0.003, epoch780, val loss0.6988, overfitting
+if 0.005, epoch686, val loss0.7046, overfitting
+if 0.008, epoch1191, val loss0.5832, overfitting
+if 0.010, and it doesn't work, epoch2
+
+# TODO: How to tune these hyper-parameters to improve your model's performance?
+config = {
+    'n_epochs': 3000,                # maximum number of epochs
+    'batch_size': 270,               # mini-batch size for dataloader
+    'optimizer': 'SGD',              # optimization algorithm (optimizer in torch.optim)
+    'optim_hparas': {                # hyper-parameters for the optimizer (depends on which optimizer you are using)
+        'lr': 0.000,                 # learning rate of SGD
+        'momentum': 0.9              # momentum for SGD
+    },
+    'early_stop': 200,               # early stopping epochs (the number epochs since your model's last improvement)
+    'save_path': 'models/model.pth'  # your model will be saved here
+    }
+
+
+Next stage, I will chelenge the mid level
+
+I try the early stop by 200->50step
+learning rate was 0.001, as a result loss = 0.7463 ----score: 3.22141 is didnot change
+
+Then, Professor say: using the 42 dimension to improve it
+
+target_only = True
+that the code was
+        else:
+            # TODO: Using 40 states & 2 tested_positive features (indices = 57 & 75)
+            pass
+
+
+Finally, I get the message from the terminal, that was currect
+Finished reading the train set of COVID19 Dataset (1926 samples found, each dim = 42)
+Finished reading the dev set of COVID19 Dataset (214 samples found, each dim = 42)
+Finished reading the test set of COVID19 Dataset (560 samples found, each dim = 42)
