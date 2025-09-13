@@ -1,6 +1,9 @@
-Step by Step to create the environment of Python, and its for Pytourch running the deeplearning work.
+# Started form create the env
+#### Step by Step to create the environment of Python, and its for Pytourch running the deeplearning work.
 
 The common list was following:
+
+---
 
 1. As you would like to create an environment, the command was: create, -n: name, extera added python version
 
@@ -8,21 +11,24 @@ $ conda create -n <name> python=3.11
 
 2. After the created, list the environment, find the name and type the command to switch the environment
 
-$ conda env list
-$ conda activate test
+``` $ conda env list ```
+
+``` $ conda activate test ```
 
 As you should list the plugin in your environment
-$ conda list
+
+``` $ conda list```
 
 3. As you finished the use, leave the environment
 
-$ ase conda deactivate
+``` $ ase conda deactivate``` 
 
 4. Delete the environment you create was:
 
-$ conda env remove -n <name>
+``` $ conda env remove -n <name>``` 
 
 5. In the environment, if you want to add the plugins,
 
-$ conda install <plugin name>
-$ pip install <plugin name>
+```$ conda install <plugin name> ```
+
+```$ pip install <plugin name> ```
